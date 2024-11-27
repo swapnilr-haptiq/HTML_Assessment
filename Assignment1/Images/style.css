@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM sans", sans-serif;
+}
+
+.container2 {
+  display: flex;
+  width: 1180px;
+  height: 40px;
+  margin: 60px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  background-color: #25dac5;
+  height: 40px;
+  width: 120px;
+  border-radius: 30px;
+  color: #1a1313;
+  font-size: 18px;
+  line-height: 26px;
+  border: 2px solid #ebeaed;
+}
+
+.container-left ul {
+  display: flex;
+  align-items: center;
+}
+
+.container-right ul {
+  display: flex;
+}
+
+.head h2 {
+  align-items: baseline;
+  width: 106px;
+  height: 32px;
+  font-size: 24px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 500px;
+  margin: 0;
+  align-items: center;
+}
+
+li {
+  margin: 20px;
+  list-style-type: none;
+  /* padding: 10px 20px; */
+}
+
+ul li a {
+  text-decoration: none;
+  color: #15143966;
+}
+
+img {
+  width: 450px;
+  height: 265px;
+  border-radius: 10px;
+}
+
+.container-img {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  color: #1e0e62;
+  font-size: 42px;
+  line-height: 50px;
+  width: 600px;
+  height: 156px;
+  top: 217px;
+  left: 115px;
+}
+
+input {
+  width: 480px;
+  height: 40px;
+  line-height: 26px;
+  size: 20px;
+  padding: 10px;
+  /* margin-left: 50px; */
+  margin-bottom: 10px;
+  border-radius: 30px;
+  border: 2px solid #ebeaed;
+  color: #15143966;
+}
+
+form {
+  margin-top: 40px;
+}
+
+.container3 {
+  display: flex;
+  justify-content: space-between;
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.container4 {
+  display: flex;
+  /* flex-direction: row;
+  gap: 300px; */
+  width: 1170px;
+  justify-content: space-between;
+}
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-img p {
+  width: 350px;
+  height: 112px;
+  padding: 20px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  color: #15143966;
+  padding-left: 0px;
+}
+
+.btn-main {
+  width: 500px;
+  height: 60px;
+  padding: 10px;
+  /* margin-left: 50px; */
+  border-radius: 30px;
+  background-color: #25dac5;
+  border: 2px solid #ebeaed;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+input::placeholder {
+  font-size: 20px;
+  padding-left: 19px;
+}
+
+.comments {
+  /* margin: 10px 0px 0px 0px; */
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #15143966;
+  width: 500px;
+}
