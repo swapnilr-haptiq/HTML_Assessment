@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Heebo", sans-serif;
 }
 
@@ -54,7 +57,7 @@ li {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .content {
@@ -103,7 +106,6 @@ li {
 .second1 {
   width: 1170px;
   margin: 0 auto;
-  margin-bottom: 10px;
 }
 
 .second1 ul .recent {
