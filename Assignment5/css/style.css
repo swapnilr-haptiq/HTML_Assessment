@@ -75,10 +75,11 @@ header {
 }
 
 .brandName {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 32px;
   color: #fff;
+  text-decoration: none;
   z-index: 4;
 }
 
@@ -89,7 +90,7 @@ header {
 .navBar {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   z-index: 4;
 }
 
@@ -130,7 +131,7 @@ header {
 
 .navItems a {
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   font-weight: 600;
 }
@@ -145,7 +146,7 @@ header {
 }
 
 .login span a {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22px;
   font-weight: 700;
   align-items: center;
@@ -155,10 +156,11 @@ header {
 .hero {
   position: relative;
   background-image: url(../images/hero-cover.jpg);
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  /* background-size: auto 100%; */
+  background-size: cover;
   margin-top: -107px;
   background-position: center;
   z-index: 1;
@@ -354,6 +356,11 @@ header {
   border: none;
 }
 
+.priceWrapper button:hover {
+  color: aqua;
+  background-color: bisque;
+}
+
 .priceCard h3 {
   color: #252b42;
   margin-bottom: 35px;
@@ -538,6 +545,10 @@ header {
   border: none;
 }
 
+.consultingWrapper button:hover {
+  color: violet;
+}
+
 footer {
   background-color: #252b42;
   color: #fff;
@@ -568,6 +579,7 @@ h4 {
   font-size: 14px;
   line-height: 24px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .footer ul {
