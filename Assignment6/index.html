@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment6</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Heebo:wght@100..900&family=Lato:wght@400;700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;600;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+
+
+    <!-- header -->
+
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div>
+            <div><img src="./images/Nav/FoodWagonLogo.png" alt=""></div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse centerNav" id="navbarText">
+           <div class="centerNavWrapper">
+            <span class="deliverTo">Deliver to:</span>
+            <div><img src="./images/Nav/map-marker-alt.png" alt=""></div>
+            <div>
+              <span class="currentLocation">Current Location</span>
+              <span class="location">Mohammadpur Bus Stand, Dhaka</span>
+            </div>
+           </div>
+          </div>
+          <div class="rightNav">
+            <div class="rightNavWrap">
+              <div><a href=""><img src="./images/Nav/Search.png""></a></div>
+              <span class="location searchFood">Search Food</span>
+            </div>
+            <div class="loginButton">
+              <button class="rightNavWrap">
+                <div><img src="./images/Nav/user.png" alt=""></div>
+                <span>Login</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero">
+      <div class="container">
+        <div class="row leftHero">
+          <div class="col-md-7 col-sm-12">
+            <h1>Are you starving?</h1>
+            <p>Within a few clicks, find meals that are accessible near you</p>
+
+              <div class="heroFormWrapper">
+                <div class="formBtnWrapper">
+                  <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item deliveryBtn" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="pills-home-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-home"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-home"
+                        aria-selected="true"
+                      >
+                        <div><img src="./images/Hero/DeliveryIcon.png" alt="" /></div>
+                        Delivery
+                      </button>
+                    </li>
+                    <li class="nav-item pickUpBtn" role="presentation">
+                      <button
+                      class="nav-link"
+                        id="pills-profile-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-profile"
+                        aria-selected="false"
+                      >
+                        <div><img src="./images/Hero/PickIcon.png" alt="" /></div>
+                        Pickup
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="formInputWrapper">
+                  <div class="tab-content" id="pills-tabContent">
+                    <div
+                      class="tab-pane show active"
+                      id="pills-home"
+                      role="tabpanel"
+                      aria-labelledby="pills-home-tab"
+                    >
+                      <div class="inputBtnWrapper">
+                        <div class="inputWrapper">
+                          <div class="inputImgWrapper">
+                            <img
+                              class="img-fluid"
+                              src="./images/Hero/Location.png"
+                              alt=""
+                            />
+                          </div>
+                          <input type="text" placeholder="Enter Your Address" />
+                        </div>
+                        <div class="heroBtnWrapper">
+                          <button type="submit">
+                            <div><img src="./images/Hero/FindFoodSearch.png" alt="" /></div>
+                            Find Food
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade inputBtnWrapper"
+                      id="pills-profile"
+                      role="tabpanel"
+                      aria-labelledby="pills-profile-tab"
+                    >
+                      <div class="inputBtnWrapper">
+                        <div class="inputWrapper">
+                          <div class="inputImgWrapper">
+                            <img
+                              class="img-fluid"
+                              src="./images/Hero/Location.png"
+                              alt=""
+                            />
+                          </div>
+                          <input
+                            type="text"
+                            placeholder="Enter Pickup Location"
+                          />
+                        </div>
+                        <div class="heroBtnWrapper">
+                          <button type="submit">
+                            <img src="./images/Hero/FindFoodSearch.png" alt="" />
+                            Find Pickup
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class=" heroRightImg">
+        <img class="img-fluid" src="./images/Hero/heroDishRight.png" alt="">
+      </div>
+    </section>
+
+
+    <!-- end header -->
+
+
+
+
+
+
+
+
+
+
+    <!-- dish -->
+
+
+    <section class="dishSection">
+      <div class="container">
+        <div class="row dishes">
+          <div class="col-md-3 col-sm-12">
+            <div class="cardContainer">
+              <div class="dishCard"><img src="./images/dish/Greys Vage1.png" alt="">
+                <div class="percentage">
+                  <h2 class="percentNum">15</h2>
+                  <div class="percentageOff"><span class="percentageSymbol">%</span><span>off</span></div>
+                </div>
+            </div>
+            <div class="dishInfo">
+              <span class="dishName">Greys Vage</span>
+              <div><span class="daysRemaining">6 Days Remaining</span></div>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="cardContainer">
+              <div class="dishCard"><img src="./images/dish/Greys Vage2.png" alt="">
+              <div class="percentage">
+                <h2 class="percentNum">15</h2>
+                <div class="percentageOff"><span class="percentageSymbol">%</span><span>off</span></div>
+              </div>
+            </div>
+            <div class="dishInfo">
+              <span class="dishName">Greys Vage</span>
+              <div><span class="daysRemaining">6 Days Remaining</span></div>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="cardContainer">
+              <div class="dishCard"><img src="./images/dish/Greys Vage3.png" alt="">
+                <div class="percentage">
+                  <h2 class="percentNum">15</h2>
+                  <div class="percentageOff"><span class="percentageSymbol">%</span><span>off</span></div>
+                </div>
+            </div>
+            <div class="dishInfo">
+              <span class="dishName">Greys Vage</span>
+              <div><span class="daysRemaining">6 Days Remaining</span></div>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="cardContainer">
+              <div class="dishCard"><img src="./images/dish/Greys Vage4.png" alt="">
+                <div class="percentage">
+                  <h2 class="percentNum">15</h2>
+                  <div class="percentageOff"><span class="percentageSymbol">%</span><span>off</span></div>
+                </div>
+            </div>
+            <div class="dishInfo">
+              <span class="dishName">Greys Vage</span>
+              <div><span class="daysRemaining">6 Days Remaining</span></div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- dish -->
+
+
+
+
+    <!-- search food -->
+
+    <section class="searchFoodSection">
+      <div class="container searchFoodSectionContent">
+        <div class="searchFoodMenu">
+          <span class="searchTitle">Search by Food</span>
+
+          <div class="searchFoodBtns">
+            <button class="viewAll">
+              View All <img src="./images/food/ViewAllRightArrow.png" alt="" />
+            </button>
+
+            <div class="directionArrows">
+              <button class="SearchArrow leftArrow">
+                <div class="SearchArrowImgWrapper">
+                  <img src="./images/food/leftA.png" alt="" />
+                </div>
+              </button>
+
+              <button class="SearchArrow rightArrow">
+                 <div class="SearchArrowImgWrapper">
+                <img src="./images/food/RightA.png" alt="" />
+                 </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slickSlider">
+          <div class="container">
+          <div class="cardsSection">
+            <div class="sliderCard">
+              <div class="cardImgWrapper">
+                <img
+                  src="./images/food/pizza.png"
+                  alt=""
+                />
+              </div>
+              <div class="cardTitle">Pizza</div>
+            </div>
+
+            <div class="sliderCard">
+              <div class="cardImgWrapper">
+                <img
+                  src="./images/food/burger.png"
+                  alt=""
+                />
+              </div>
+              <div class="cardTitle">Burger</div>
+            </div>
+
+            <div class="sliderCard">
+              <div class="cardImgWrapper">
+                <img
+                  src="./images/food/noodles.png"
+                  alt=""
+                />
+              </div>
+              <div class="cardTitle">Noodles</div>
+            </div>
+
+            <div class="sliderCard">
+              <div class="cardImgWrapper">
+                <img
+                  src="./images/food/chowmein.png"
+                  alt=""
+                />
+              </div>
+              <div class="cardTitle">Sub-sandiwch</div>
+            </div>
+
+            <div class="sliderCard">
+              <div class="cardImgWrapper">
+                <img
+                  src="./images/food/pizza.png"
+                  alt=""
+                />
+              </div>
+              <div class="cardTitle">Pizza</div>
+            </div>
+
+            <div class="sliderCard">
+              <div class="cardImgWrapper">
+                <img
+                  src="./images/food/steak.png"
+                  alt=""
+                />
+              </div>
+              <div class="cardTitle">Steak</div>
+            </div>
+
+            <div class="sliderCard">
+              <div class="cardImgWrapper">
+                <img
+                  src="./images/food/sub.png"
+                  alt=""
+                />
+              </div>
+              <div class="cardTitle">Steak</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end serch food -->
+
+
+
+    <!-- discount  -->
+
+   
+    <section class="deliveryBg">
+      <div class="container">
+        <div class="row deliveryCards">
+            <div class="col-md-4 col-sm-12">
+              <div class="deliveryWrapper">
+                <div class="iconWrapper"><img src="./images/delivery/DailyDiscountImg.png" alt=""></div>
+              <div class="deliveryheading"><span>Daily Discounts</span></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="deliveryWrapper">
+                <div class="iconWrapper"><img src="./images/delivery/LiveTrackingImg.png" alt=""></div>
+              <div class="deliveryheading"><span>Live Tracing</span></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="deliveryWrapper">
+                <div class="iconWrapper"><img src="./images/delivery/QuickImg.png" alt=""></div>
+              <div class="deliveryheading"><span>Quick Delivery</span></div>
+              </div>
+            </div>
+            </div>
+      </div>
+      </section>
+
+      <!-- discount -->
+
+
+
+
+      <!-- app download -->
+    
+    <section class="appDownloadSection">
+      <div class="curveBg"></div>
+      <div class="container">
+        <div class="row appdownloadWrapper">
+          <div class="col-md-6">
+            <div class="mobileImg"><img src="./images/AppDownload/Image (1).png" alt=""></div>
+          </div>
+          <div class="col-md-6 align-content-center">
+            <div class="installAppWrapper">
+              <h2 class="installAppText">Install the app</h2>
+              <p class="installAppInfo">It's never been easier to order food. Look for the finest discounts and you'll be lost in a world of delectable food.</p>
+              <div class="storeButtons">
+                <button class="appDownloadBtn">
+                  <img src="./images/AppDownload/Google Play logo.png" alt="">
+                  <div class="appDownloadBtnText">
+                    <span class="btnText1">Get it on</span>
+                    <span class="btnText2">Google Play</span>
+                  </div>
+                </button>
+                <button class="appDownloadBtn">
+                  <img src="./images/AppDownload/Apple logo.png" alt="">
+                  <div class="appDownloadBtnText">
+                    <span class="btnText1">Get it on</span>
+                    <span class="btnText2">Google Play</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- app download -->
+
+
+
+    <!-- Best Deal -->
+
+    <section class="bestDeals">
+      <div class="container">
+        <div class="bestDealsCardsWrapper">
+          <div class="bestDealCard">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="dealInfo">
+                  <div class="dishInfo">
+                    <span class="dishCaption"
+                      >Best deals
+                      <span class="orderDishName">Crispy Sandwiches</span></span
+                    >
+                    <p class="dishInfo">
+                      Enjoy the large size of sandwiches. Complete perfect slice
+                      of sandwiches.
+                    </p>
+                  </div>
+
+                  <button class="bestDealOrderBtn">
+                    Proceed to order
+                    <img src="./images/food/RightA.png" alt="" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-md-7 dealImgWrapper">
+                <img src="./images/BestDeals/CrispySandwich.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="bestDealCard evenCard">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="dealInfo">
+                  <div class="dishInfo">
+                    <span class="dishCaption"
+                      >Celebrate parties with
+                      <span class="orderDishName">Fried Chicken</span></span
+                    >
+                    <p class="dishInfo">
+                      Get the best fried chicken smeared with a lip smacking
+                      lemon chili flavor. Check out best deals for fried
+                      chicken.
+                    </p>
+
+                    <button class="bestDealOrderBtn">
+                      Proceed to order
+                      <img src="./images/food/RightA.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-7 dealImgWrapper">
+                <img src="./images/BestDeals/FriedChickenImg.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="bestDealCard">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="dealInfo">
+                  <div class="dishInfo">
+                    <span class="dishCaption"
+                      >Wanna eat hot & spicy
+                      <span class="orderDishName">Pizza?</span></span
+                    >
+                    <p class="dishInfo">
+                      Pair up with a friend and enjoy the hot and crispy pizza
+                      pops. Try it with the best deals.
+                    </p>
+                  </div>
+
+                  <button class="bestDealOrderBtn">
+                    Proceed to order
+                    <img src="./images/food/RightA.png" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-7 dealImgWrapper">
+                <img src="./images/BestDeals/SpicyPizza.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- best Deal -->
+
+
+    
+
+    <!-- order-section -->
+
+    <section class="order">
+      <div class="container">
+        <div class="orderWrapper">
+          <p>Are you ready to order with the best deals?</p>
+          <div class="orderBtn">
+            <button>Proceed to order</button>
+            <div><img src="images/rightDirection.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+
+
+
+
+
+    <!-- footer section -->
+
+    <footer>
+      <div class="container">
+        <div class="row footerHead">
+          <div class="col-md-8 col-sm-12 d-flex footerWrapper">
+            <div class="companyInfo">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">careers</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+
+            <div class="companyInfo">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="#">Help&Support</a></li>
+                <li><a href="#">Partner with us</a></li>
+                <li><a href="#">Ride with us</a></li>
+              </ul>
+            </div>
+
+            <div class="companyInfo">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Refund & Cancellation</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+            </div>
+          </div>
+
+        
+          <div class="col-md-4 col-sm-12">
+            <div class="followUS">
+              <h4>Follow Us</h4>
+              <div class="socialMediaIcon">
+                <div><img src="images/insta1.png" alt="" /></div>
+                <div><img src="images/fb1.png" alt="" /></div>
+                <div><img src="images/twit1.png" alt="" /></div>
+              </div>
+
+              <h5>Receive exclusive offers in your mailbox</h5>
+
+              <div class="inputField">
+                <div class="emailInputWrapper">
+                  <div><img src="images/mail.png" alt="" /></div>
+                  <input type="email" placeholder="Enter your mail" />
+                </div>
+                <div class="subscribe">
+                  <button>Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="copyRightWrapper">
+          <div class="CopyRight">
+            <div class="rightCopyRight">
+            <h5>All rights Reserved</h5>
+            <div><img src="images/Symbol.png" alt="" /></div>
+            </div>
+            <h4>Your Company, 2021</h4>
+          </div>
+
+            <div class=" CopyRight leftCopyRight">
+            <h5>Made with </h5>
+            <div><img src="images/heart.png"></div> 
+            <span>by</span>
+            <h4>Themewagon</h4>
+          </div>
+      </div>
+    </footer>
+
+
+
+
+    <script>
+      $(document).ready(function () {
+        $(".cardsSection").slick({
+          infinite: true,
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+
+        // Add click events for custom arrows
+        $(".leftArrow").click(function () {
+          $(".cardsSection").slick("slickPrev"); // Move to the previous slide
+        });
+
+        $(".rightArrow").click(function () {
+          $(".cardsSection").slick("slickNext"); // Move to the next slide
+        });
+      });
+    </script>
+
+
+
+<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"
+      integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
